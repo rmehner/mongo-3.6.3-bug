@@ -25,7 +25,19 @@ No output for a while, then:
 UnhandledPromiseRejectionWarning: MongoServerSelectionError: Server selection timed out after 30000 ms
 ```
 
-## Fix
+## Fixes
+
+### Downgrade to 3.6.2
 
 In `package.json`, change version of `mongodb` to `3.6.2`, run `npm install`.
 Everything works as expected then.
+
+### Don't use useUnifiedTopology
+
+Change the connection call to:
+
+```js
+const client = new MongoClient("mongodb://localhost:27017");
+```
+
+This also works as expected then.
