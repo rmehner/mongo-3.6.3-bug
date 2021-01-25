@@ -1,5 +1,7 @@
 # Mongo Client 3.6.3 bug
 
+🐛 https://jira.mongodb.org/browse/NODE-3052
+
 ## Requirements
 
 * Node 12+
